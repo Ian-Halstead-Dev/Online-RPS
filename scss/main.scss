@@ -1,0 +1,42 @@
+@import "resets";
+@import "vars";
+@import "utils";
+@import "home-page";
+@import "anim/scroll-up-down";
+
+body {
+  background-color: $white;
+  font-family: 'Londrina Solid', cursive;
+  padding: 0;
+  margin: 0;
+}
+
+
+.game-element-container {
+  width: 14rem;
+  height: 14rem;
+  background-color: $gray;
+  border-radius: 50%;
+  overflow: hidden; position: relative;
+  @include flex-center;
+  .game-element {
+    display: none;
+  }
+  .game-element-animation {
+    display: block;
+    animation: scroll-up-down .6s  linear;
+  }
+}
+
+.decoration-triangle {
+  position: fixed;
+  border-left: 200vh solid transparent;
+  border-right: 150vh solid transparent;
+  border-bottom: 200vh solid #F5F5F5;
+  left: -180vh;
+  top: -50vh;
+  
+  z-index: -1;
+  
+}
+
